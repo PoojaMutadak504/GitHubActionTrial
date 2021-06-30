@@ -10,5 +10,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run existing Test
-        run: docker-compose run -e apikey=env.apikey -e apisecret=env.apisecret -e testid=env.testid blazemeter
+        run: docker-compose run -e apikey=$env.apikey -e apisecret=$env.apisecret -e testid=$env.testid blazemeter
      
