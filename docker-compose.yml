@@ -1,5 +1,5 @@
 version: '3'
 services:
-  web:
-    container_name: webapp-frontend
-    build: .
+  redis:
+    container_name: redis-backend
+    image: "blazerunner/blazemeter"
