@@ -3,12 +3,8 @@ on: push
 jobs:
   run-test:
     runs-on: ubuntu-latest
-    env:
-      apikey: b9107809a101b8b788e9964f
-      apisecret: 24da75ad1302cfb986fe84846288e3c9aecb61742a269f0927db60b286aedbf4f9c28df6
-      testid: 9092315
     steps:
       - uses: actions/checkout@v2
       - name: Run existing Test
-        run: docker-compose run -e apikey=$env.apikey -e apisecret=$env.apisecret -e testid=$env.testid blazemeter
+        run: docker-compose run -e apikey=b9107809a101b8b788e9964f -e apisecret=24da75ad1302cfb986fe84846288e3c9aecb61742a269f0927db60b286aedbf4f9c28df6 -e testid=9092315 blazemeter
      
