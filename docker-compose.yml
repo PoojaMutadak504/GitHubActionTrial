@@ -3,5 +3,3 @@ services:
   web:
     container_name: webapp-frontend
     build: .
-    ports:
-      - "5000:5000"
