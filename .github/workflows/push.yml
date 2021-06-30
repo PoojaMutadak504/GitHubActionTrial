@@ -6,5 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the stack
-        run: docker-compose run -e apikey=9aae648147e93b3062dc6ff8 -e apisecret=9341ea46f833b66542c9eb02026cac95857275e7e3f440bab2518f15b769ec152595a18a -e testid=23
+        run: docker-compose run -e apikey=9aae648147e93b3062dc6ff8 -e apisecret=9341ea46f833b66542c9eb02026cac95857275e7e3f440bab2518f15b769ec152595a18a -e testid=23 redis
      
