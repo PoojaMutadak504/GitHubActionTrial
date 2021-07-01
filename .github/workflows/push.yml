@@ -1,7 +1,7 @@
 name: run-blazemeter-test-actions-workflow
 on: push
 jobs:
-  run-test:
+  run-existing-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
