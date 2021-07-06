@@ -5,17 +5,6 @@ env:
   testid: '9092315'
 on: push
 jobs:
-  find-and-replace:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Find and Replace
-        uses: nguyenvanuyn96/str-find-and-replace-action@master
-        with:
-          find: "hello"
-          replace: "world"
-          include: "README.md" # Will match all README.md files in any nested directory
-
   run-existing-test:
     runs-on: ubuntu-latest
     steps:
