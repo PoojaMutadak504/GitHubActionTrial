@@ -2,4 +2,4 @@ version: '3'
 services:
   blazemeter:
     container_name: run-test
-    image: "blazerunner/blazemeter"
+    image: "{{imageName}}"
