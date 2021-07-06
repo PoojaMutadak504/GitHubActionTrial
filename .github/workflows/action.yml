@@ -13,7 +13,7 @@ jobs:
         uses: nguyenvanuyn96/str-find-and-replace-action@master
         with:
           find: "{{imageName}}"
-          replace: "blazerunner/abc"
+          replace: "blazerunner/blazemeter"
           include: "docker-compose.yml" # Will match all README.md files in any nested directory
       - name: Run existing Test
         run: docker-compose run -e apikey=${{env.apikey}} -e apisecret=${{env.apisecret}} -e testid=${{env.testid}} blazemeter
