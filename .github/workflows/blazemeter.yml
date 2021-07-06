@@ -20,6 +20,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Find and Replace
+        uses: nguyenvanuyn96/str-find-and-replace-action@master
+        with:
+          find: "hello"
+          replace: "world"
+          include: "readme.md" # Will match all README.md files in any nested directory
       - name: Run existing Test
         run: docker-compose run -e apikey=${{env.apikey}} -e apisecret=${{env.apisecret}} -e testid=${{env.testid}} blazemeter
      
