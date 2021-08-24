@@ -7,17 +7,10 @@ on: push
 jobs:
   run-existing-test:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Find and Replace
-        uses: nguyenvanuyn96/str-find-and-replace-action@master
-        with:
-          find: "{{imageName}}"
-          replace: "blazerunner/blazemeter"
-          include: "docker-compose.yml" # Will match all README.md files in any nested directory
+    steps:    
       - name: Run Blazemeter test
         #uses: ./ # Uses an action in the root directory
-        uses: PoojaMutadak504/DockerAction@v2
+        uses: BlazeRunner-BZR/Github-Action@v2
         id: run-test
         with:
           apikey: 'b9107809a101b8b788e9964f'
