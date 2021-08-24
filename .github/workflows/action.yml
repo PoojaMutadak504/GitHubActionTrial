@@ -13,6 +13,6 @@ jobs:
         uses: BlazeRunner-BZR/Github-Action@v2
         id: run-test
         with:
-          apikey: $env.apikey
-          apisecret: $env.apisecret
-          testid: $env.testid
+          apikey: ${{env.apikey}}
+          apisecret: ${{env.apisecret}}
+          testid: ${{env.testid}}
