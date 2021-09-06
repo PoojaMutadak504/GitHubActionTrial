@@ -10,9 +10,10 @@ jobs:
     steps:    
       - name: Run Blazemeter test
         #uses: ./ # Uses an action in the root directory
-        uses: BlazeRunner-BZR/Github-Action@v2
+        uses: PoojaMutadak504/DockerAction@v4
         id: run-test
         with:
           apikey: ${{env.apikey}}
           apisecret: ${{env.apisecret}}
           testid: ${{env.testid}}
+          supportedfolderPath: ./Supporting Files
