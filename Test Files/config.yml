@@ -1,0 +1,27 @@
+---
+execution:   
+- concurrency: 2
+  ramp-up: 60s
+  iterations: 5
+  scenario: UAT2_FullApply_Test
+  locations:
+    europe-west2-a: 1
+    #harbor-60895d63d5fddb05276526b4: 1
+  locations-weighted: false
+
+scenarios:
+  UAT2_FullApply_Test:
+    script: UJ.006_Originations_EISA_FullApply_2.5.jmx
+
+modules:
+  blazemeter:
+    dedicated-ips: true
+
+reporting:
+- module: passfail
+  criteria:
+  - avg-rt>2s, continue as failed
+  - p90>2s, continue as failed
+  - fail>50%
+
+  
