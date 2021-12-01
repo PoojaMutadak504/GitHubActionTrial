@@ -1,8 +1,9 @@
 name: run-blazemeter-test-actions-workflow
 env:
-  apikey: 'bc3fe837c92453778f625575'
-  apisecret: '035b3c858209d84b04ee9946cabd120efe3b18ea4767c39147976b5ef1b598782c97d0c2'
-  testid: '9927679'
+  apikey: '673e0985b554e480881605e1'
+  apisecret: '570f3adadb95ce61bccb6a1097e9f0c69fa5e1d650b5040ea74aeaaa1f0d63bc5babbf0b'
+  testid: '9874872'
+  modeldata: '{"email": "\"asas@gmail.com/\"","password": "\"asas/\""}'
 on: push
 jobs:
   run-existing-test:
@@ -10,10 +11,11 @@ jobs:
     steps:    
       - name: Run Blazemeter test
         #uses: ./ # Uses an action in the root directory
-        uses: PoojaMutadak504/DockerAction@v8
+        uses:  dnyanehblazerunner/BlazeAction@v5
         id: run-test
         with:
           apikey: ${{env.apikey}}
           apisecret: ${{env.apisecret}}
           testid: ${{env.testid}}
-          supportedfolderPath: './Supporting Files'
+          modeldata: ${{ toJSON(env.modeldata) }} 
+         
