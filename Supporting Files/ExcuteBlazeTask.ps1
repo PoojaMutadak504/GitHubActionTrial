@@ -36,8 +36,10 @@ try
 			
 				foreach($line in $parsed){
 				   if($line.id -eq $shipId -and $line.state -eq "idle")
-				   {					   
+				   {		
+				   
 						Write-Host "Agent Available"
+						 Exit 1; 
 				   }
 				   else{
 					  Exit 1; 
