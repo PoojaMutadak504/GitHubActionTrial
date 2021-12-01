@@ -31,7 +31,7 @@ try
 				$shipJSONObj = $shipObj | ConvertFrom-Json;
 				$shipJSONObj2 = $shipJSONObj | ConvertTo-Json -Depth 4;
 				Write-Host $shipJSONObj2.id
-				# $parsed = $shipJSONObj2 | convertfrom-json;
+				$parsed = $shipJSONObj2 | convertfrom-json;
                 # Write-Host $shipJSONObj2.id
 			
 				foreach($line in $parsed){
