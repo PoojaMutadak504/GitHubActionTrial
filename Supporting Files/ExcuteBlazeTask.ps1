@@ -67,7 +67,7 @@ try
 							# Write-Host $shipJSONObj2.id
 							$AgentAvailable='false';
 							foreach($line in $parsed){
-							   if($line.id -eq $shipId -and $line.state -eq "idle")
+							   if($line.id -eq $shipId -and $line.state -eq "idlee")
 							   {					   
 									Write-Host "Agent Available"
 									$AgentAvailable='true';
