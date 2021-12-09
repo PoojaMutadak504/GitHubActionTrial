@@ -39,7 +39,7 @@ try
 				   {		
 				   
 						Write-Host "Agent Available"
-						 Exit 1; 
+						 Exit 0; 
 				   }
 				   else{
 					  Exit 1; 
